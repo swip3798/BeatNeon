@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://api/HueAPIBaseClass.gd" type="Script" id=1]
+
+[node name="HueAPIBaseClass" type="HTTPRequest"]
+script = ExtResource( 1 )
+[connection signal="request_completed" from="." to="." method="_on_HueAPIBaseClass_request_completed"]
