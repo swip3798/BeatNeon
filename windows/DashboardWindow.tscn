@@ -29,19 +29,24 @@ margin_bottom = 20.0
 custom_fonts/font = ExtResource( 3 )
 text = "Select the color for your lights:"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HSplitContainer/GridContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/GridContainer"]
 margin_top = 31.0
 margin_right = 487.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ColorPicker" parent="HSplitContainer/GridContainer/HBoxContainer" instance=ExtResource( 4 )]
+[node name="ColorPicker" parent="HSplitContainer/GridContainer/VBoxContainer" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 487.0
-margin_bottom = 569.0
+margin_bottom = 438.0
 size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="HSplitContainer/GridContainer/VBoxContainer"]
+margin_top = 442.0
+margin_right = 487.0
+margin_bottom = 467.0
 
 [node name="GridContainer2" type="GridContainer" parent="HSplitContainer"]
 margin_left = 537.0
