@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://widgets/BrightnessSlider.gd" type="Script" id=1]
-[ext_resource path="res://res/BrightnessSlider.shader" type="Shader" id=2]
+[ext_resource path="res://res/BrightnessSliderShader.tres" type="Shader" id=2]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
@@ -9,11 +9,14 @@ shader = ExtResource( 2 )
 [sub_resource type="ImageTexture" id=2]
 
 [sub_resource type="StyleBoxLine" id=3]
+color = Color( 1, 1, 1, 1 )
 grow_begin = -8.0
 grow_end = -8.0
-thickness = 7
+thickness = 8
 
 [sub_resource type="StyleBoxLine" id=4]
+grow_begin = -8.0
+grow_end = -8.0
 thickness = 0
 
 [node name="BrightnessSlider" type="Control"]
