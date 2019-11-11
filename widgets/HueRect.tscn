@@ -1,11 +1,47 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://res/HueRect.shader" type="Shader" id=1]
+[ext_resource path="res://widgets/HueRect.gd" type="Script" id=1]
+[ext_resource path="res://res/xor.shader" type="Shader" id=2]
+[ext_resource path="res://res/selector.png" type="Texture" id=3]
+
+[sub_resource type="VisualShader" id=3]
+code = "shader_type canvas_item;
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Output:0
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -101, -9 )
+mode = 1
+flags/light_only = false
+nodes/fragment/0/position = Vector2( 640, 140 )
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = SubResource( 3 )
 
 [sub_resource type="ShaderMaterial" id=2]
-shader = ExtResource( 1 )
+shader = ExtResource( 2 )
 
 [node name="HueRect" type="ColorRect"]
-material = SubResource( 2 )
+material = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Selector" type="Sprite" parent="."]
+material = SubResource( 2 )
+texture = ExtResource( 3 )
+[connection signal="gui_input" from="." to="." method="_on_HueRect_gui_input"]

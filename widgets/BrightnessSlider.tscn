@@ -1,35 +1,38 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://res/BrightnessSlider.shader" type="Shader" id=1]
+[ext_resource path="res://widgets/BrightnessSlider.gd" type="Script" id=1]
+[ext_resource path="res://res/BrightnessSlider.shader" type="Shader" id=2]
 
-[sub_resource type="ShaderMaterial" id=3]
-shader = ExtResource( 1 )
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 2 )
 
 [sub_resource type="ImageTexture" id=2]
 
-[sub_resource type="StyleBoxLine" id=4]
+[sub_resource type="StyleBoxLine" id=3]
 grow_begin = -8.0
 grow_end = -8.0
 thickness = 7
 
-[sub_resource type="StyleBoxLine" id=1]
+[sub_resource type="StyleBoxLine" id=4]
 thickness = 0
 
 [node name="BrightnessSlider" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
 
 [node name="Background" type="HSlider" parent="."]
-material = SubResource( 3 )
+material = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_icons/grabber_disabled = SubResource( 2 )
-custom_styles/slider = SubResource( 4 )
+custom_styles/slider = SubResource( 3 )
 editable = false
 scrollable = false
+ticks_on_borders = true
 
 [node name="HSlider" type="HSlider" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_styles/slider = SubResource( 1 )
+custom_styles/slider = SubResource( 4 )
 ticks_on_borders = true
