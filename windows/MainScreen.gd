@@ -4,7 +4,8 @@ var os_window_dragged: bool = false
 var fixed_mouse_position: Vector2
 
 func _ready():
-	get_tree().get_root().set_transparent_background(true)
+	if ProjectSettings.get_setting("display/window/per_pixel_transparency/allowed"):
+		get_tree().get_root().set_transparent_background(true)
 
 func _on_DragPoint_gui_input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
