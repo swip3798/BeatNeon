@@ -6,8 +6,6 @@ var lights_color: Color
 var lights_brightness: float
 export var wait_until_send: float = 0.25
 
-var light_selector: OptionButton
-
 func _ready():
 	pass
 	
@@ -27,3 +25,4 @@ func _on_ColorPicker_color_changed(color, brightness):
 	lights_brightness = brightness
 	color_send = false
 	time_since_last_change = 0
+	$HSplitContainer/VBoxContainer/ColorRect.color = lights_color

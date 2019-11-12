@@ -32,10 +32,18 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 33.0
 margin_right = 487.0
-margin_bottom = 600.0
+margin_bottom = 502.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
+
+[node name="ColorRect" type="ColorRect" parent="HSplitContainer/VBoxContainer"]
+margin_left = 7.0
+margin_top = 506.0
+margin_right = 482.0
+margin_bottom = 593.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
 
 [node name="GridContainer2" type="GridContainer" parent="HSplitContainer"]
 margin_left = 537.0
