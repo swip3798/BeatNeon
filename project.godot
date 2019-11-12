@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="ChromaHue"
 run/main_scene="res://windows/MainScreen.tscn"
-boot_splash/image="res://screen.png"
+boot_splash/image="res://splashscreen.png"
 config/icon="res://icon.png"
 
 [autoload]
