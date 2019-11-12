@@ -59,3 +59,4 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="ComposeWindow" parent="TabContainer/Compose Effects" instance=ExtResource( 5 )]
+[connection signal="gui_input" from="TabContainer" to="." method="_on_TabContainer_gui_input"]

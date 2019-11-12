@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://res/HueCircle.tres" type="Shader" id=1]
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = ExtResource( 1 )
+
+[node name="ColorCircle" type="ColorRect"]
+material = SubResource( 9 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -128.719
+margin_top = -12.1716
+margin_right = -552.719
+margin_bottom = -12.1716
+size_flags_vertical = 3
