@@ -6,6 +6,8 @@ export var step: float = 1
 export var page: float = 0
 export var value: float = 0
 
+signal value_changed(value)
+
 var slider: HSlider
 
 func _ready():
@@ -15,3 +17,8 @@ func _ready():
 	slider.step = step
 	slider.page = page
 	slider.value = value
+	
+
+func _on_HSlider_value_changed(value):
+	self.value = value
+	emit_signal("value_changed", value)

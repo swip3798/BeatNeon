@@ -19,9 +19,17 @@ config/name="ChromaHue"
 run/main_scene="res://windows/MainScreen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SaveEngine="*res://service/SaveEngine.gd"
+
 [debug]
 
 settings/stdout/print_fps=true
+
+[physics]
+
+common/physics_fps=30
 
 [rendering]
 

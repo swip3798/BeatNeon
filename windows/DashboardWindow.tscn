@@ -53,3 +53,4 @@ margin_left = 537.0
 margin_right = 1024.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
+[connection signal="color_changed" from="HSplitContainer/GridContainer/VBoxContainer/ColorPicker" to="." method="_on_ColorPicker_color_changed"]
