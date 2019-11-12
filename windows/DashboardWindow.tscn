@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://windows/DashboardWindow.gd" type="Script" id=1]
 [ext_resource path="res://res/standardtheme.tres" type="Theme" id=2]
-[ext_resource path="res://res/font_heavy.tres" type="DynamicFont" id=3]
+[ext_resource path="res://res/font_black.tres" type="DynamicFont" id=3]
 [ext_resource path="res://widgets/ColorPicker.tscn" type="PackedScene" id=4]
+[ext_resource path="res://res/font_regular.tres" type="DynamicFont" id=5]
 
 [node name="DashboardWindow" type="Control"]
 anchor_right = 1.0
@@ -16,41 +17,37 @@ anchor_bottom = 1.0
 theme = ExtResource( 2 )
 custom_constants/separation = 50
 
-[node name="GridContainer" type="GridContainer" parent="HSplitContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer"]
 margin_right = 487.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
-custom_constants/vseparation = 11
-custom_constants/hseparation = 11
 
-[node name="Label" type="Label" parent="HSplitContainer/GridContainer"]
+[node name="Label" type="Label" parent="HSplitContainer/VBoxContainer"]
 margin_right = 487.0
-margin_bottom = 20.0
+margin_bottom = 29.0
 custom_fonts/font = ExtResource( 3 )
 text = "Select the color for your lights:"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/GridContainer"]
-margin_top = 31.0
-margin_right = 487.0
-margin_bottom = 600.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="ColorPicker" parent="HSplitContainer/GridContainer/VBoxContainer" instance=ExtResource( 4 )]
+[node name="ColorPicker" parent="HSplitContainer/VBoxContainer" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_top = 33.0
 margin_right = 487.0
-margin_bottom = 438.0
+margin_bottom = 571.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
 
-[node name="Button" type="Button" parent="HSplitContainer/GridContainer/VBoxContainer"]
-margin_top = 442.0
+[node name="LightSelector" type="OptionButton" parent="HSplitContainer/VBoxContainer"]
+margin_top = 575.0
 margin_right = 487.0
-margin_bottom = 467.0
+margin_bottom = 600.0
+custom_fonts/font = ExtResource( 5 )
+text = "Select light"
 
 [node name="GridContainer2" type="GridContainer" parent="HSplitContainer"]
 margin_left = 537.0
 margin_right = 1024.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
-[connection signal="color_changed" from="HSplitContainer/GridContainer/VBoxContainer/ColorPicker" to="." method="_on_ColorPicker_color_changed"]
+[connection signal="color_changed" from="HSplitContainer/VBoxContainer/ColorPicker" to="." method="_on_ColorPicker_color_changed"]
