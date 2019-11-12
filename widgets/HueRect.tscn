@@ -1,183 +1,15 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://res/HueRectShader.tres" type="Shader" id=1]
 [ext_resource path="res://widgets/HueRect.gd" type="Script" id=2]
-[ext_resource path="res://res/selector.png" type="Texture" id=3]
+[ext_resource path="res://res/XorShadert.tres" type="Shader" id=3]
+[ext_resource path="res://res/selector.png" type="Texture" id=4]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 1 )
 
-[sub_resource type="VisualShaderNodeScalarOp" id=3]
-operator = 1
-
-[sub_resource type="VisualShaderNodeScalarOp" id=4]
-operator = 1
-
-[sub_resource type="VisualShaderNodeScalarFunc" id=5]
-function = 12
-
-[sub_resource type="VisualShaderNodeScalarFunc" id=6]
-function = 12
-
-[sub_resource type="VisualShaderNodeScalarFunc" id=7]
-function = 12
-
-[sub_resource type="VisualShaderNodeVectorCompose" id=8]
-
-[sub_resource type="VisualShaderNodeTexture" id=9]
-source = 2
-texture = ExtResource( 3 )
-
-[sub_resource type="VisualShaderNodeInput" id=10]
-input_name = "uv"
-
-[sub_resource type="VisualShaderNodeScalarConstant" id=11]
-
-[sub_resource type="VisualShaderNodeTexture" id=12]
-source = 1
-
-[sub_resource type="VisualShaderNodeInput" id=13]
-input_name = "screen_uv"
-
-[sub_resource type="VisualShaderNodeVectorDecompose" id=14]
-
-[sub_resource type="VisualShaderNodeVectorDecompose" id=15]
-
-[sub_resource type="VisualShaderNodeScalarOp" id=16]
-operator = 1
-
-[sub_resource type="VisualShader" id=17]
-code = "shader_type canvas_item;
-
-
-
-void vertex() {
-// Output:0
-
-}
-
-void fragment() {
-// Input:6
-	vec3 n_out6p0;
-	n_out6p0 = vec3(SCREEN_UV,0.0);
-
-// Scalar:4
-	float n_out4p0;
-	n_out4p0 = 0.000000;
-
-// Texture:5
-	vec3 n_out5p0;
-	float n_out5p1;
-	{
-		vec4 _tex_read = textureLod( SCREEN_TEXTURE , n_out6p0.xy , n_out4p0 );
-		n_out5p0 = _tex_read.rgb;
-		n_out5p1 = _tex_read.a;
-	}
-
-// VectorDecompose:7
-	float n_out7p0;
-	float n_out7p1;
-	float n_out7p2;
-	n_out7p0 = n_out5p0.x;
-	n_out7p1 = n_out5p0.y;
-	n_out7p2 = n_out5p0.z;
-
-// Input:3
-	vec3 n_out3p0;
-	n_out3p0 = vec3(UV,0.0);
-
-// Texture:2
-	vec3 n_out2p0;
-	float n_out2p1;
-	{
-		vec4 _tex_read = textureLod( TEXTURE , n_out3p0.xy , n_out4p0 );
-		n_out2p0 = _tex_read.rgb;
-		n_out2p1 = _tex_read.a;
-	}
-
-// VectorDecompose:8
-	float n_out8p0;
-	float n_out8p1;
-	float n_out8p2;
-	n_out8p0 = n_out2p0.x;
-	n_out8p1 = n_out2p0.y;
-	n_out8p2 = n_out2p0.z;
-
-// ScalarOp:9
-	float n_out9p0;
-	n_out9p0 = n_out7p0 - n_out8p0;
-
-// ScalarFunc:12
-	float n_out12p0;
-	n_out12p0 = abs(n_out9p0);
-
-// ScalarOp:10
-	float n_out10p0;
-	n_out10p0 = n_out7p1 - n_out8p1;
-
-// ScalarFunc:13
-	float n_out13p0;
-	n_out13p0 = abs(n_out10p0);
-
-// ScalarOp:11
-	float n_out11p0;
-	n_out11p0 = n_out7p2 - n_out8p2;
-
-// ScalarFunc:14
-	float n_out14p0;
-	n_out14p0 = abs(n_out11p0);
-
-// VectorCompose:15
-	vec3 n_out15p0;
-	n_out15p0 = vec3( n_out12p0 , n_out13p0 , n_out14p0 );
-
-// Output:0
-	COLOR.rgb = n_out15p0;
-	COLOR.a = n_out2p1;
-
-}
-
-void light() {
-// Output:0
-
-}
-"
-graph_offset = Vector2( -36, -240 )
-mode = 1
-flags/light_only = false
-nodes/fragment/0/position = Vector2( 1140, 120 )
-nodes/fragment/2/node = SubResource( 9 )
-nodes/fragment/2/position = Vector2( 100, 220 )
-nodes/fragment/3/node = SubResource( 10 )
-nodes/fragment/3/position = Vector2( -140, 200 )
-nodes/fragment/4/node = SubResource( 11 )
-nodes/fragment/4/position = Vector2( -140, 260 )
-nodes/fragment/5/node = SubResource( 12 )
-nodes/fragment/5/position = Vector2( 100, 120 )
-nodes/fragment/6/node = SubResource( 13 )
-nodes/fragment/6/position = Vector2( -140, 140 )
-nodes/fragment/7/node = SubResource( 14 )
-nodes/fragment/7/position = Vector2( 280, 120 )
-nodes/fragment/8/node = SubResource( 15 )
-nodes/fragment/8/position = Vector2( 280, 220 )
-nodes/fragment/9/node = SubResource( 16 )
-nodes/fragment/9/position = Vector2( 540, 40 )
-nodes/fragment/10/node = SubResource( 3 )
-nodes/fragment/10/position = Vector2( 540, 140 )
-nodes/fragment/11/node = SubResource( 4 )
-nodes/fragment/11/position = Vector2( 540, 240 )
-nodes/fragment/12/node = SubResource( 5 )
-nodes/fragment/12/position = Vector2( 740, 60 )
-nodes/fragment/13/node = SubResource( 6 )
-nodes/fragment/13/position = Vector2( 740, 160 )
-nodes/fragment/14/node = SubResource( 7 )
-nodes/fragment/14/position = Vector2( 740, 260 )
-nodes/fragment/15/node = SubResource( 8 )
-nodes/fragment/15/position = Vector2( 940, 120 )
-nodes/fragment/connections = PoolIntArray( 3, 0, 2, 0, 4, 0, 2, 1, 6, 0, 5, 0, 4, 0, 5, 1, 5, 0, 7, 0, 2, 0, 8, 0, 7, 0, 9, 0, 8, 0, 9, 1, 7, 1, 10, 0, 8, 1, 10, 1, 7, 2, 11, 0, 8, 2, 11, 1, 9, 0, 12, 0, 10, 0, 13, 0, 11, 0, 14, 0, 12, 0, 15, 0, 13, 0, 15, 1, 14, 0, 15, 2, 15, 0, 0, 0, 2, 1, 0, 1 )
-
 [sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 17 )
+shader = ExtResource( 3 )
 
 [node name="HueRect" type="ColorRect"]
 material = SubResource( 1 )
@@ -187,5 +19,5 @@ script = ExtResource( 2 )
 
 [node name="Selector" type="Sprite" parent="."]
 material = SubResource( 2 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 [connection signal="gui_input" from="." to="." method="_on_HueRect_gui_input"]
