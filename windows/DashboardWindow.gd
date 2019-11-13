@@ -5,11 +5,8 @@ var color_send: bool = true
 var lights_color: Color
 var lights_brightness: float
 export var wait_until_send: float = 0.25
-
-func _ready():
-	pass
 	
-func _process(delta):
+func _physics_process(delta):
 	if not color_send:
 		time_since_last_change += delta
 		if time_since_last_change > wait_until_send:
@@ -25,4 +22,4 @@ func _on_ColorPicker_color_changed(color, brightness):
 	lights_brightness = brightness
 	color_send = false
 	time_since_last_change = 0
-	$HSplitContainer/VBoxContainer/HBoxContainer/ColorRect.color = lights_color
+	$HSplitContainer/ColorPickSection/HBoxContainer/ColorRect.color = lights_color

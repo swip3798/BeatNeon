@@ -38,7 +38,6 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HSplitContainer/ColorPickSection"]
-editor/display_folded = true
 margin_top = 502.0
 margin_right = 487.0
 margin_bottom = 595.0

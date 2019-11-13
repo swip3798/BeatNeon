@@ -23,3 +23,7 @@ func _on_TabContainer_gui_input(event):
 	elif event is InputEventMouseMotion and os_window_dragged:
 		OS.window_position += get_global_mouse_position() - fixed_mouse_position
 	pass
+
+
+func _on_GrabContainer_gui_input(event):
+	_on_TabContainer_gui_input(event)
