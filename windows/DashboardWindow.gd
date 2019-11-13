@@ -25,4 +25,4 @@ func _on_ColorPicker_color_changed(color, brightness):
 	lights_brightness = brightness
 	color_send = false
 	time_since_last_change = 0
-	$HSplitContainer/VBoxContainer/ColorRect.color = lights_color
+	$HSplitContainer/VBoxContainer/HBoxContainer/ColorRect.color = lights_color
