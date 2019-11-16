@@ -1,15 +1,18 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://windows/SplashScreen.gd" type="Script" id=1]
 [ext_resource path="res://res/SplashscreenShader.tres" type="Shader" id=2]
 [ext_resource path="res://res/music.png" type="Texture" id=3]
-[ext_resource path="res://res/font_title.tres" type="DynamicFont" id=4]
+[ext_resource path="res://res/SplashScreenReadScreen.tres" type="Shader" id=4]
+[ext_resource path="res://res/font_title.tres" type="DynamicFont" id=5]
 
-[sub_resource type="ShaderMaterial" id=7]
+[sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
+shader_param/HueOffset = null
 
-[sub_resource type="ShaderMaterial" id=8]
-shader = ExtResource( 2 )
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 4 )
+shader_param/HueOffset = null
 
 [node name="SplashScreen" type="Control"]
 anchor_right = 1.0
@@ -31,7 +34,7 @@ margin_right = 997.0
 margin_bottom = 573.0
 
 [node name="Texture" type="TextureRect" parent="PanelContainer/VBoxContainer"]
-material = SubResource( 7 )
+material = SubResource( 1 )
 margin_right = 990.0
 margin_bottom = 491.0
 size_flags_vertical = 3
@@ -40,11 +43,11 @@ expand = true
 stretch_mode = 6
 
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
-material = SubResource( 8 )
+material = SubResource( 2 )
 margin_top = 495.0
 margin_right = 990.0
 margin_bottom = 566.0
-custom_fonts/font = ExtResource( 4 )
-text = "ChromaHue"
+custom_fonts/font = ExtResource( 5 )
+text = "BeatNeon"
 align = 1
 valign = 1

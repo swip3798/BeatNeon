@@ -14,7 +14,7 @@ uniform_name = "HueOffset"
 function = 5
 
 [sub_resource type="VisualShaderNodeInput" id=5]
-input_name = "uv"
+input_name = "screen_uv"
 
 [sub_resource type="VisualShaderNodeVectorDecompose" id=6]
 
@@ -44,7 +44,7 @@ void vertex() {
 void fragment() {
 // Input:3
 	vec3 n_out3p0;
-	n_out3p0 = vec3(UV,0.0);
+	n_out3p0 = vec3(SCREEN_UV,0.0);
 
 // VectorDecompose:4
 	float n_out4p0;
@@ -109,7 +109,7 @@ void light() {
 
 }
 "
-graph_offset = Vector2( -132, 122.75 )
+graph_offset = Vector2( -249, 92.75 )
 mode = 1
 flags/light_only = false
 nodes/vertex/0/position = Vector2( 540, 140 )
