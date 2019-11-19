@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256px"
+   height="256px"
+   viewBox="0 0 256 256"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Bridge.svg">
+  <defs
+     id="defs3727" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="288.63892"
+     inkscape:cy="121.50923"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:grid-bbox="true" />
+  <metadata
+     id="metadata3730">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       ry="50.97456"
+       rx="50.690002"
+       y="2.980229e-08"
+       x="-3.693458e-09"
+       height="256"
+       width="256"
+       id="rect3755"
+       style="fill:#ffffff;stroke-width:1.05027032;opacity:1" />
+    <circle
+       r="62.5"
+       cy="128"
+       cx="128"
+       id="path3759"
+       style="fill:#000000;stroke-width:1.00608706;opacity:1" />
+    <circle
+       r="3"
+       cy="37"
+       cx="86.333"
+       id="path3761"
+       style="fill:#000000;stroke-width:1.04446602;opacity:1" />
+    <circle
+       r="3"
+       cy="37"
+       cx="169.666"
+       id="path3761-7"
+       style="fill:#000000;stroke-width:1.04446602;opacity:1" />
+    <circle
+       r="3"
+       cy="37"
+       cx="128"
+       id="path3761-7-5"
+       style="fill:#000000;stroke-width:1.04446602;opacity:1" />
+    <circle
+       r="60.25"
+       cy="128.75006"
+       cx="127.95"
+       id="path3759-6"
+       style="fill:#ffffff;stroke-width:0.96986789;opacity:1" />
+  </g>
+</svg>

@@ -20,7 +20,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Dashboard" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -31,6 +30,7 @@ margin_bottom = -4.0
 [node name="DashboardWindow" parent="TabContainer/Dashboard" instance=ExtResource( 2 )]
 
 [node name="Ambient" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
