@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://api/HueBridge.gd" type="Script" id=1]
+[ext_resource path="res://api/RegisterUser.gd" type="Script" id=2]
+
+[node name="HueBridge" type="Node"]
+script = ExtResource( 1 )
+
+[node name="RegisterUser" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="CheckUser" type="HTTPRequest" parent="RegisterUser"]
+
+[node name="RegisterNewUser" type="HTTPRequest" parent="RegisterUser"]
+[connection signal="request_completed" from="RegisterUser/CheckUser" to="RegisterUser" method="_on_CheckUser_request_completed"]
+[connection signal="request_completed" from="RegisterUser/RegisterNewUser" to="RegisterUser" method="_on_RegisterNewUser_request_completed"]

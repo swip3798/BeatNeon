@@ -11,7 +11,7 @@ func set_value(name, value):
 	_save_json()
 	
 func get_value(name):
-	return global_dict[name]
+	return global_dict.get(name, null)
 	
 func _save_json():
 	var json: String = JSON.print(global_dict)
