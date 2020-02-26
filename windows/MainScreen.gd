@@ -7,6 +7,7 @@ func _ready():
 	if ProjectSettings.get_setting("display/window/per_pixel_transparency/allowed"):
 		get_tree().get_root().set_transparent_background(true)
 	$TabContainer.current_tab = 1
+	$HueBridge.init_after_login()
 
 func _on_DragPoint_gui_input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:

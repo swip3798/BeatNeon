@@ -3,7 +3,7 @@ extends Control
 var selected_color: Color = Color(1, 0, 0)
 var brightness: float = 1.0
 
-var slider: Slider
+var slider
 
 signal color_changed(color, brightness)
 

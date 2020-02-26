@@ -5,6 +5,7 @@
 
 [node name="HueBridge" type="Node"]
 script = ExtResource( 1 )
+emulator_mode = true
 
 [node name="RegisterUser" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -12,5 +13,9 @@ script = ExtResource( 2 )
 [node name="CheckUser" type="HTTPRequest" parent="RegisterUser"]
 
 [node name="RegisterNewUser" type="HTTPRequest" parent="RegisterUser"]
+
+[node name="TestIP" type="HTTPRequest" parent="."]
+[connection signal="user_id_gathered" from="RegisterUser" to="." method="_on_RegisterUser_user_id_gathered"]
 [connection signal="request_completed" from="RegisterUser/CheckUser" to="RegisterUser" method="_on_CheckUser_request_completed"]
 [connection signal="request_completed" from="RegisterUser/RegisterNewUser" to="RegisterUser" method="_on_RegisterNewUser_request_completed"]
+[connection signal="request_completed" from="TestIP" to="." method="_on_TestIP_request_completed"]

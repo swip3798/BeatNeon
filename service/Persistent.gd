@@ -6,11 +6,11 @@ const persistent_path = "user://persistent.dat"
 func _ready():
 	_load_json()
 
-func set_value(name, value):
+func set_value(name: String, value):
 	global_dict[name] = value
 	_save_json()
 	
-func get_value(name):
+func get_value(name: String):
 	return global_dict.get(name, null)
 	
 func _save_json():
