@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="BeatNeon"
-run/main_scene="res://windows/MainScreen.tscn"
+run/main_scene="res://windows/LoginScreen.tscn"
 boot_splash/image="res://screen.png"
 config/icon="res://icon.png"
 
@@ -28,6 +28,7 @@ URLBuilder="*res://service/URLBuilder.gd"
 
 [debug]
 
+settings/fps/force_fps=60
 settings/stdout/print_fps=true
 
 [physics]
